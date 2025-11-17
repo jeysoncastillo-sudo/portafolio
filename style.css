@@ -1,0 +1,13 @@
+.element {
+  /* Atajo simple */
+  background: #fff url("imagen.jpg") top center repeat-x;
+
+  /* Atajo completo */
+  background: deeppink url("imagen.jpg") 0 0 / 150px space scroll padding-box padding-box;
+
+  /* Atajo múltiple */
+  background:
+      url("primer-plano.jpg") center center / cover,
+      deeppink url("imagen.jpg") 0 0 / 150px space scroll padding-box padding-box;
+}
+
