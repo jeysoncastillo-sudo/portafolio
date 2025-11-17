@@ -1,0 +1,174 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virtual Portfolio - Learning Portfolio</title>
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#ffffff; --accent:#0b63d6; --muted:#6b7280; --glass:rgba(255,255,255,0.6);
+      --radius:14px; --pad:20px; --maxw:1000px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef3fb);color:#111;font-size:16px;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:16px}
+
+    /* Cover */
+    .cover{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center}
+    .cover-card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 18px rgba(15,23,42,0.08)}
+    .title{font-size:28px;color:var(--accent);margin:0 0 4px}
+    .subtitle{color:var(--muted);margin:0 0 16px}
+    .meta{display:flex;flex-direction:column;gap:8px}
+    .meta strong{display:inline-block;width:140px;color:var(--muted)}
+
+    .cover-aside{background:linear-gradient(180deg,var(--accent),#2a86ff);color:white;padding:24px;border-radius:var(--radius);height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .cover-aside h2{margin:0 0 6px;font-size:20px}
+    .cover-aside p{margin:0 0 12px;opacity:0.95}
+
+    /* TOC */
+    .toc{margin:22px 0;padding:18px;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .toc h3{margin:0 0 8px}
+    .toc ol{margin:0 0 0 18px;color:var(--muted)}
+
+    /* Sections */
+    section{margin:18px 0;padding:18px;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    section h3{margin-top:0;color:var(--accent)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .evidence-item{border:1px dashed #e2e8f0;padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff, #fbfdff)}
+    .artifact{margin-top:10px;font-size:14px;color:var(--muted)}
+
+    /* Skills lists */
+    ul.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-left:18px;margin:8px 0}
+    ul.skills li{background:var(--glass);padding:8px;border-radius:8px}
+
+    /* Reflection and footer */
+    .qa{display:flex;flex-direction:column;gap:10px}
+    .qa p{margin:0}
+
+    /* Buttons */
+    .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{border:0;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(11,99,214,0.14);color:var(--accent)}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .cover{grid-template-columns:1fr;}
+      ul.skills{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){ul.skills{grid-template-columns:1fr}}
+
+    /* Print friendly */
+    @media print{
+      body{background:white}
+      .wrap{margin:0;padding:0}
+      .cover-aside{display:none}
+      .btn,.actions{display:none}
+      section, .toc{box-shadow:none;border-radius:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cover">
+      <div class="cover-card">
+        <h1 class="title">Virtual Portfolio — Learning Portfolio</h1>
+        <p class="subtitle">Semester summary and learning evidence</p>
+
+        <div class="meta">
+          <div><strong>Full Name:</strong> Jeyson Eliecer Castillo Caballero</div>
+          <div><strong>Student ID:</strong> 4-809-1611</div>
+          <div><strong>Program / Faculty:</strong> Economy</div>
+          <div><strong>Course:</strong> English course</div>
+          <div><strong>Professor:</strong> Yenny Valdez</div>
+          <div><strong>Semester / Year:</strong> second semester 2025</div>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary">Download PDF</button>
+          <button class="btn ghost">Edit</button>
+        </div>
+      </div>
+
+      <aside class="cover-aside">
+        <h2>Portfolio</h2>
+        <p>Title: Learning Portfolio</p>
+        <p>Includes: evidence, reflections, and developed skills.</p>
+      </aside>
+    </div>
+
+    <nav class="toc" aria-label="Table of Contents">
+      <h3>Table of Contents</h3>
+      <ol>
+        <li>Introduction</li>
+        <li>Evidence of Learning</li>
+        <li>Skills and Competencies</li>
+        <li>Self-Reflection</li>
+        <li>Conclusion</li>
+        <li>Appendices</li>
+      </ol>
+    </nav>
+
+    <section id="intro">
+      <h3>Introduction</h3> 
+<p><strong>Short personal introduction:</strong> I am a student with an academic background in information technology, specializing in areas such as computer networks, operating systems, and information security. I enjoy exploring new technologies, solving technical challenges, and applying my knowledge in both academic and practical environments. My interests also include continuous learning, research, and developing skills that contribute to professional growth in the field of technology.</p>
+<p><strong>Purpose of the portfolio:</strong> The purpose of this portfolio is to showcase my academic progress, technical competencies, and completed projects. It serves as a record of my learning journey, demonstrating evidence of my acquired skills, practical experience, and ability to apply concepts effectively. This portfolio also reflects my commitment to personal and professional development, as well as my readiness to face new challenges in the technology field.</p>
+
+
+    <section id="evidence">
+      
+      <h3>Evidence of Learning</h3>
+      <p>Organize entries by week, unit, or competency. Below is a template you can copy for each entry.</p>
+
+      <div class="evidence-item">
+       
+        <div style="display:flex;justify-content:space-between;align-items:center"><strong>Title:</strong><span>Project: Network Analysis</span></div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px"><strong>Date:</strong><span>09/22/2025</span></div>
+        <p style="margin-top:8px"><strong>Description:</strong> Brief explanation of the task: objectives, scope, and deliverables.</p>
+        <center>
+        <p class="artifact"><strong>Artifact</strong></p>
+        </center>
+        <center>
+<img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.35 PM.jpeg" 
+     alt="Mi foto" 
+     width="300" 
+     style="page-break-before: always; display:block;">
+     </center>
+     <center>
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.36 PM (2).jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.36 PM.jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.38 PM.jpeg" alt="Mi foto" width="300" style="display:inline-block;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.39 PM (1).jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.39 PM (2).jpeg" alt="Mi foto" width="300" style="display:inline-block;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.40 PM (1).jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.40 PM (2).jpeg" alt="Mi foto" width="300" style="display:inline-block;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.40 PM (2).jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.40 PM.jpeg" alt="Mi foto" width="300" style="display:inline-block; margin-right:10px;">
+  <img src="Nueva carpeta (3)/WhatsApp Image 2025-09-22 at 4.03.41 PM.jpeg" alt="Mi foto" width="300" style="display:inline-block;">
+  </center>
+        <p style="margin-top:8px"><strong>Reflection:</strong> Throughout this period, I've had the opportunity to engage in various activities that have allowed me to learn and develop in different areas. From creating digital portfolios to configuring networks and implementing operating systems, each experience has taught me something new and valuable.</p>
+      </div>
+
+      <p style="margin-top:12px;color:var(--muted)">Copy the card above for each evidence and replace the data.</p>
+    </section>
+
+    <section id="skills">
+      <h3>Skills and Competencies Developed</h3>
+      <div class="grid-2">
+        <div>
+          <h4>Technical</h4>
+          <ul class="skills">
+            <li>Coding / Programming</li>
+            <li>Lab Reports</li>
+            <li>Data Analysis</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Academic / Professional</h4>
+          <ul class="skills">
+            <li>Oral Presentation</li>
+          </ul>
+  <a href="siguiente.html">
+  <button>Anterior</button>
